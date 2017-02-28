@@ -32,7 +32,7 @@ elseif($text=="ciao")
 }
 elseif($text=="massetti")
 {
-	$response = "Massetti è un coglionazzo e veramente succhia il cazzo";
+	$response = "Massetti è un coglionazzone e veramente succhia il cazzone";
 }
 elseif($text=="vaffanculo")
 {
