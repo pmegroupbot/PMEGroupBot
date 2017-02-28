@@ -26,7 +26,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 }
 elseif($text=="massetti")
 {
-	$response = "Massetti è un coglionazzo";
+	$response = "Massetti è un coglionazzo e veramente succhia il cazzo";
 }
 elseif($text=="vaffanculo")
 {
