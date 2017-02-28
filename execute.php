@@ -26,7 +26,9 @@ if(strpos($text, "/start") === 0 )
 }
 elseif($text=="ciao")
 {
-	$response = "Ciao a sto cazzo, salutami tua madre";
+	$random_number = rand(1,5);
+	
+	$response = "Ciao a sto cazzo, salutami tua madre " . $random_number;
 }
 elseif($text=="massetti")
 {
