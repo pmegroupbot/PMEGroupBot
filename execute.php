@@ -20,9 +20,13 @@ $text = trim($text);
 $text = strtolower($text);
 
 header("Content-Type: application/json");
-if(strpos($text, "/start") === 0 || $text=="ciao")
+if(strpos($text, "/start") === 0 )
 {
 	$response = "Ciao $firstname, benvenuto!";
+}
+elseif($text=="ciao")
+{
+	$response = "Ciao a sto cazzo, salutami tua madre";
 }
 elseif($text=="massetti")
 {
