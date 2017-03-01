@@ -27,8 +27,24 @@ if(strpos($text, "/start") === 0 )
 elseif($text=="ciao")
 {
 	$random_number = rand(1,5);
+	switch ($random_number) {
+	    case 1:
+		$response = "Ciao a sto cazzo, salutami tua madre ";
+		break;
+	    case 2:
+		$reponse = "Awe $firstname, mi hanno detto che tua madre fa i pompini";
+		break;
+	    case 3:
+		$reponse = "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto";
+		break;
+	    case 4:
+		$response = "E' proprio una fantastica gioranta per succhiare cazzi, $firstname";
+		break;
+	    case 5:
+		$reponse = "Ma ti sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?";
+		break;	
+}
 	
-	$response = "Ciao a sto cazzo, salutami tua madre " . $random_number;
 }
 elseif($text=="massetti")
 {
