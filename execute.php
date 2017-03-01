@@ -28,8 +28,7 @@ $ciao_array= array(
 "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto",
 "E' proprio una fantastica gioranta per succhiare cazzi, $firstname",
 "Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?"
-)
-	
+);
 
 
 header("Content-Type: application/json");
