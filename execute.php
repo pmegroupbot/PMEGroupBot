@@ -43,7 +43,7 @@ elseif($text=="ciao")
 	    case 5:
 		$reponse = "Ma ti sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?";
 		break;	
-}
+	}
 	
 }
 elseif($text=="massetti")
