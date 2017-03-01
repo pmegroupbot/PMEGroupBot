@@ -1,4 +1,7 @@
 <?php
+
+/* define("BOT_TOKEN", "MKE INSERISCI QUI IL TOKEN"); */
+
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
@@ -19,6 +22,16 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
+$ciao_array={
+"Ciao a sto cazzo, salutami tua madre ",
+"Awe $firstname, mi hanno detto che tua madre fa i pompini",
+"Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto",
+"E' proprio una fantastica gioranta per succhiare cazzi, $firstname",
+"Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?"
+)
+	
+
+
 header("Content-Type: application/json");
 if(strpos($text, "/start") === 0 )
 {
@@ -26,25 +39,7 @@ if(strpos($text, "/start") === 0 )
 }
 elseif($text=="ciao")
 {
-	$random_number = rand(1,5);
-	switch ($random_number) {
-	    case 1:
-		$response = "Ciao a sto cazzo, salutami tua madre ";
-		break;
-	    case 2:
-		$response = "Awe $firstname, mi hanno detto che tua madre fa i pompini";
-		break;
-	    case 3:
-		$response = "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto";
-		break;
-	    case 4:
-		$response = "E' proprio una fantastica gioranta per succhiare cazzi, $firstname";
-		break;
-	    case 5:
-		$response = "Ma ti sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?";
-		break;	
-	}
-	
+	$response = $ciao_array[rand(0,count($ciao_array)-1)];
 }
 elseif($text=="massetti")
 {
