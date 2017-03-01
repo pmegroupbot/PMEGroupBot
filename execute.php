@@ -32,16 +32,16 @@ elseif($text=="ciao")
 		$response = "Ciao a sto cazzo, salutami tua madre ";
 		break;
 	    case 2:
-		$reponse = "Awe $firstname, mi hanno detto che tua madre fa i pompini";
+		$response = "Awe $firstname, mi hanno detto che tua madre fa i pompini";
 		break;
 	    case 3:
-		$reponse = "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto";
+		$response = "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto";
 		break;
 	    case 4:
 		$response = "E' proprio una fantastica gioranta per succhiare cazzi, $firstname";
 		break;
 	    case 5:
-		$reponse = "Ma ti sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?";
+		$response = "Ma ti sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?";
 		break;	
 	}
 	
