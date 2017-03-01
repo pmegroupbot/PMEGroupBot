@@ -22,7 +22,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
-$ciao_array={
+$ciao_array= array(
 "Ciao a sto cazzo, salutami tua madre ",
 "Awe $firstname, mi hanno detto che tua madre fa i pompini",
 "Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto",
