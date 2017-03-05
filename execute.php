@@ -30,28 +30,48 @@ $ciao_array= array(
 "Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?"
 );
 
+$photolink_array= array(
+"https://hugelolcdn.com/i/273952.gif",
+"http://m.memegen.com/zgf0u5.jpg"
+);
+
 
 header("Content-Type: application/json");
 if(strpos($text, "/start") === 0 )
 {
 	$response = "Ciao $firstname, benvenuto!";
+	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters["method"] = "sendMessage";
 }
 elseif($text=="ciao")
 {
 	$response = $ciao_array[rand(0,count($ciao_array)-1)];
+	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters["method"] = "sendMessage";
 }
 elseif($text=="massetti")
 {
 	$response = "Massetti è un coglionazzone e veramente succhia il cazzone";
+	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters["method"] = "sendMessage";
 }
 elseif($text=="vaffanculo")
 {
 	$response = "A te e mammt";
+	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters["method"] = "sendMessage";
+}
+elseif($text=="dio cane")
+{
+	$image_link = $photolink_array[rand(0,count($photolink_array)-1)];
+	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Porcoddio");
+	$parameters["method"] = "sendPhoto";
 }
 else
 {
 	$response = "Suca, non sono ancora pronto per risponderti a dovere, fatti un giro tra poco";
+	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters["method"] = "sendMessage";
 }
-$parameters = array('chat_id' => $chatId, "text" => $response);
-$parameters["method"] = "sendMessage";
+
 echo json_encode($parameters);
