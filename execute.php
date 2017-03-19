@@ -13,7 +13,7 @@ if(!$update)
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-$firstname = isset($message['user']['first_name']) ? $message['user']['first_name'] : "Sconosciuto coglione"; /*ho cambiato chat con user per vedere se funziona sui gruppi*/
+$firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : ""; /*ho cambiato chat con user per vedere se funziona sui gruppi*/
 $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
@@ -70,11 +70,10 @@ elseif($text=="dio cane")
 }
 else
 {
-	/*
-	$response = "Suca, non sono ancora pronto per risponderti a dovere, fatti un giro tra poco";
+	$response = "Message = $message; Messageid = $messageId; chatID = $chatId; Firstname =  $firstname; LastName = $lastname; Username = $username; Date= $date; Text = $text  ";
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
-	*/
+
 }
 
 echo json_encode($parameters);
