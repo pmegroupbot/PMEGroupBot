@@ -13,13 +13,12 @@ if(!$update)
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-$firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : ""; /*ho cambiato chat con user per vedere se funziona sui gruppi*/
-$lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
-$username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
+$from = isset($message['from']) ? $message['from'] : "";
+$from_user_firstname = isset($from['first_name']) ? $from['first_name'] : "";
+$from_user_lastname = isset($from['last_name']) ? $from['last_name'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
-$from = isset($message['from']) ? $message['from'] : "";
-$from_user = isset($from['first_name']) ? $from['first_name'] : "";
+
 
 $text = trim($text);
 $text = strtolower($text);
