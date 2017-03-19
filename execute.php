@@ -13,7 +13,7 @@ if(!$update)
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-$firstname = isset($message['user']['first_name']) ? $message['user']['first_name'] : ""; /*ho cambiato chat con user per vedere se funziona sui gruppi*/
+$firstname = isset($message['user']['first_name']) ? $message['user']['first_name'] : "Sconosciuto coglione"; /*ho cambiato chat con user per vedere se funziona sui gruppi*/
 $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
@@ -30,9 +30,10 @@ $ciao_array= array(
 "Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?"
 );
 
-$photolink_array= array(
+$diocane_array= array(
 "https://hugelolcdn.com/i/273952.gif",
-"http://m.memegen.com/zgf0u5.jpg"
+"http://m.memegen.com/zgf0u5.jpg",
+"https://cdn.meme.am/cache/instances/folder920/27294920.jpg"
 );
 
 
@@ -63,15 +64,17 @@ elseif($text=="vaffanculo")
 }
 elseif($text=="dio cane")
 {
-	$image_link = $photolink_array[rand(0,count($photolink_array)-1)];
+	$image_link = $diocane_array[rand(0,count($diocane_array)-1)];
 	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Porcoddio");
 	$parameters["method"] = "sendPhoto";
 }
 else
 {
+	/*
 	$response = "Suca, non sono ancora pronto per risponderti a dovere, fatti un giro tra poco";
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
+	*/
 }
 
 echo json_encode($parameters);
