@@ -19,16 +19,16 @@ $from_user_lastname = isset($from['last_name']) ? $from['last_name'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
-
 $text = trim($text);
 $text = strtolower($text);
 
+
 $ciao_array= array(
 "Ciao a sto cazzo, salutami tua madre ",
-"Awe $firstname, mi hanno detto che tua madre fa i pompini",
-"Oh $firstname, che bello averti qui, mi piacerebbe se fossi morto",
-"E' proprio una fantastica gioranta per succhiare cazzi, $firstname",
-"Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $lastname?"
+"Awe $from_user_firstname, mi hanno detto che tua madre fa i pompini",
+"Oh $from_user_firstname, che bello averti qui, mi piacerebbe se fossi morto",
+"E' proprio una fantastica gioranta per succhiare cazzi, $from_user_firstname",
+"Ma le sembra normale che la metafisica renda impossibile l'eterogiunzione abitativa della realtà, $from_user_lastname?"
 );
 
 $diocane_array= array(
@@ -66,12 +66,12 @@ elseif($text=="vaffanculo")
 elseif($text=="dio cane")
 {
 	$image_link = $diocane_array[rand(0,count($diocane_array)-1)];
-	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Porcoddio");
+	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Un dioporco anche a te, caro $from_user_firstname");
 	$parameters["method"] = "sendPhoto";
 }
 else
 {
-	$response = "Message = $message; Messageid = $messageId; chatID = $chatId; Firstname =  $firstname; LastName = $lastname; Username = $username; Date= $date; Text = $text ; From_User = $from_user";
+	$response = "Message = $message; Messageid = $messageId; chatID = $chatId; Firstname =  $firstname; LastName = $lastname; Username = $username; Date= $date; Text = $text ; From_User = $from_user_firstname $from_user_lastname";
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
 
