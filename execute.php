@@ -71,7 +71,7 @@ elseif($text=="dio cane")
 }
 elseif($text=="chi non salta")
 {
-	$audio_link = "https://www.dropbox.com/s/zhmseo8y3o8bso2/Chi%20Non%20Salta.m4a?dl=0";
+	$audio_link = "http://res.cloudinary.com/karmo/raw/upload/v1415468388/kdzu36kr8t7aowkeqrn7.mp4";
 	$parameters = array('chat_id' => $chatId, "audio" => $audio_link, "caption" => "E chi non salta è Barlettano, caro $from_user_firstname");
 	$parameters["method"] = "sendAudio";
 }
