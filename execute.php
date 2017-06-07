@@ -71,7 +71,7 @@ elseif($text=="dio cane")
 }
 elseif($text=="chi non salta")
 {
-	$audio_link = "https://github.com/pmegroupbot/PMEGroupBot/blob/master/Chi%20Non%20Salta.m4a";
+	$audio_link = "https://www.dropbox.com/s/zhmseo8y3o8bso2/Chi%20Non%20Salta.m4a?dl=0";
 	$parameters = array('chat_id' => $chatId, "audio" => $audio_link, "caption" => "E chi non salta è Barlettano, caro $from_user_firstname");
 	$parameters["method"] = "sendAudio";
 }
