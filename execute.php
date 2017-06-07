@@ -69,6 +69,13 @@ elseif($text=="dio cane")
 	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Un dioporco anche a te, caro $from_user_firstname");
 	$parameters["method"] = "sendPhoto";
 }
+elseif($text=="chi non salta")
+{
+	$audio_link = "https://www.dropbox.com/home?preview=Chi+Non+Salta.m4a";
+	$parameters = array('chat_id' => $chatId, "audio" => $audio_link, "caption" => "E chi non salta è Barlettano, caro $from_user_firstname");
+	$parameters["method"] = "sendAudio";
+}
+
 else
 {
 	$response = "Message = $message; Messageid = $messageId; chatID = $chatId; Firstname =  $firstname; LastName = $lastname; Username = $username; Date= $date; Text = $text ; From_User = $from_user_firstname $from_user_lastname";
