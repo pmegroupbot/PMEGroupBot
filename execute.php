@@ -51,7 +51,7 @@ elseif($text=="ciao")
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
 }
-elseif($text=="massetti")
+elseif (strpos($text,"massetti") !== false)
 {
 	$response = "Massetti è un coglionazzone e veramente succhia il cazzone";
 	$parameters = array('chat_id' => $chatId, "text" => $response);
