@@ -69,6 +69,12 @@ elseif($text=="dio cane")
 	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Un dioporco anche a te, caro $from_user_firstname");
 	$parameters["method"] = "sendPhoto";
 }
+elseif($text=="gdrive")
+{
+	$image_link = "https://drive.google.com/file/d/0B6uPFcU4mkS1cnpZOWI5ajNCOVE/view?usp=sharing";
+	$parameters = array('chat_id' => $chatId, "photo" => $image_link, "caption" => "Un dioporco anche a te, caro $from_user_firstname");
+	$parameters["method"] = "sendPhoto";
+}
 elseif($text=="chi non salta")
 {
 	$audio_link = "http://res.cloudinary.com/karmo/raw/upload/v1415468388/kdzu36kr8t7aowkeqrn7.mp4";
