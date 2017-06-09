@@ -77,7 +77,7 @@ elseif($text=="gdrive")
 }
 elseif($text=="chi non salta")
 {
-	$audio_link = "https://drive.google.com/file/d/0B6uPFcU4mkS1REhEeHpmbG0taHM/view?usp=sharing";
+	$audio_link = "https://drive.google.com/file/d/0B6uPFcU4mkS1V09VWTk4aDV3RUE/view?usp=sharing";
 	$parameters = array('chat_id' => $chatId, "audio" => $audio_link, "caption" => "E chi non salta è Barlettano, caro $from_user_firstname");
 	$parameters["method"] = "sendAudio";
 }
